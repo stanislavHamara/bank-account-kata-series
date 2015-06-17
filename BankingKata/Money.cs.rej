@@ -1,0 +1,16 @@
+diff a/BankingKata/Money.cs b/BankingKata/Money.cs	(rejected hunks)
+@@ -0,0 +1,13 @@
++﻿namespace BankingKata
++{
++    public class Money
++    {
++
++        private readonly int value;
++        public Money(int i)
++        {
++            this.value = i;
++        }
++
++    } 
++}
+\ No newline at end of file
