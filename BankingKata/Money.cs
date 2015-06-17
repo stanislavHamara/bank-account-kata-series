@@ -7,5 +7,10 @@
         {
             this.value = i;
         }
-    } 
+
+        public bool Equals(Money money)
+        {
+            return this.value == money.value;
+        }
+    }
 }
