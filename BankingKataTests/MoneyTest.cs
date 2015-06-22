@@ -32,6 +32,14 @@ namespace BankingKataTests
         {
             Assert.True(new Money(-100) < new Money(-10));
         }
+
+        [Test]
+        public void CanAddTwoMoneys()
+        {
+            var expectedMoney = new Money(6);
+            var addedMoney = new Money(2) + new Money(4);
+            Assert.True(expectedMoney.Equals(addedMoney));
+        }
     }
 }
 
