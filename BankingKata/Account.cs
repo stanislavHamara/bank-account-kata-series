@@ -10,15 +10,20 @@ namespace BankingKata
     {
         private readonly List<Money> transactionList = new List<Money>();
        
-        public void Deposit(Money p0)
+        public void Deposit(Money money)
         {
-            transactionList.Add(p0);
+            transactionList.Add(money);
         }
 
         public object CalculateBalance()
         {
             var balance = new Money(0);
             return transactionList.Aggregate(balance, (current, money) => current + money);
+        }
+
+        public void Withdraw(Money money)
+        {
+            transactionList.Add(-money);
         }
     }
 }
