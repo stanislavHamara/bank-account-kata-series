@@ -22,9 +22,15 @@ namespace BankingKataTests
         }
 
         [Test]
-        public void CheckIfMoneyIsPossitive()
+        public void CanCompareTwoMoniesForGreaterThan()
         {
             Assert.True(new Money(-10) > new Money(-100));
+        }
+
+        [Test]
+        public void CanCompareTwoMoniesForLessThan()
+        {
+            Assert.True(new Money(-100) < new Money(-10));
         }
     }
 }
