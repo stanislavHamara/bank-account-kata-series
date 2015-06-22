@@ -10,14 +10,14 @@ namespace BankingKataTests
         [Test]
         public void NewMoneyHasValueZero()
         {
-            Money money = new Money(0);
+            var money = new Money(0);
             Assert.True(money.Equals(new Money(0)));
         }
 
         [Test]
         public void CompareToNotMoneyObject()
         {
-            Money money = new Money(10);
+            var money = new Money(10);
             Assert.False(money.Equals(new DateTime()));
         }
 
