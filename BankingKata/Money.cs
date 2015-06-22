@@ -38,5 +38,11 @@ namespace BankingKata
         {
             return new Money(a._value + b._value);
         }
+
+        public static Money operator -(Money a)
+        {
+            return new Money(-a._value);
+        }
+
     }
 }
