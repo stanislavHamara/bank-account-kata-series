@@ -11,6 +11,15 @@ namespace BankingKataTests
 	[TestFixture]
     public class AccountTests
     {
+	{
+	    private Account account;
+
+	    [SetUp]
+	    public void Init()
+	    {
+           account = new Account();
+	    }
+
 	    [Test]
 	    public void DepositingMoneyIntoAnAccountIncreasesTheBalanceByThatAmount()
 	    {
