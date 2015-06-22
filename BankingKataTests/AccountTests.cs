@@ -17,11 +17,9 @@ namespace BankingKataTests
 	        var account = new Account();
 
 	        account.Deposit(new Money(2));
-	        account.Deposit(new Money(3));
-	        account.Deposit(new Money(5));
 	        var balance = account.CalculateBalance();
 
-	        var expectedBalance = new Money(10);
+	        var expectedBalance = new Money(2)
 	        Assert.That(balance, Is.EqualTo(expectedBalance));
 	    }
     }
