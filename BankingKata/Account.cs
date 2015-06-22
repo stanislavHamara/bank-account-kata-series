@@ -8,16 +8,17 @@ namespace BankingKata
 {
     public class Account
     {
-        private List<Money> transactionList = new List<Money>();
+        private readonly List<Money> transactionList = new List<Money>();
        
         public void Deposit(Money p0)
         {
-            transactionList.Add(p0)
+            transactionList.Add(p0);
         }
 
         public object CalculateBalance()
         {
-            return null;
+            var balance = new Money(0);
+            return transactionList.Aggregate(balance, (current, money) => current + money);
         }
     }
 }
